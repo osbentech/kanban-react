@@ -17,7 +17,7 @@ function Mission() {
         <h2 className="status">Status</h2>
       </div>
       {missions.map((item) => (
-        <div className="mission">
+        <div className="mission" key={item.id}>
           <h2>{item.name}</h2>
           <p>{item.description}</p>
           <button type="button">Join mission</button>
