@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -29,4 +30,5 @@ function Mission() {
     </div>
   )
 }
+
 export default Mission;

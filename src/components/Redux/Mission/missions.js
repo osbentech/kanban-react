@@ -1,5 +1,4 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import Axios from 'axios';
 const GET = './Mission/missions/GET';
 
 const missionsReducer = (state = [], action) => {

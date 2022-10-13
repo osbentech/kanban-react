@@ -1,13 +1,13 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useMemo } from 'react';
 import { useTable } from 'react-table'
-import { getMissions } from './Redux/Mission/missions';
-import { Columns } from './Columns'
+import Columns from './Columns'
 import { useSelector } from 'react-redux';
 
 const Table = () => {
   const missions = useSelector((state) => state.missions);
-  const columns = useMemo(() => Columns, [])
-  const data = useMemo(() => missions, [])
+  const columns = useMemo(() => Columns, []);
+  const data = useMemo(() => missions, []);
 
   const tableInstance = useTable({
     columns,
@@ -29,9 +29,9 @@ const Table = () => {
           headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {
-                headerGroup.headers.map(columns => {
+                headerGroup.headers.map((columns) => 
                   <th {...columns.getHeaderProps()}>{columns.render('Header')}</th>
-                })
+                )
               }
             </tr>
           ))

@@ -15,4 +15,6 @@ const Columns = [
         Header: '',
         accessor: ''
     }
-]
+];
+
+export default Columns;
