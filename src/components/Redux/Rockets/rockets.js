@@ -7,7 +7,7 @@ const GET_STORED = './Rockets/rockets/GET_STORED';
 
 const rocketsReducer = (state = [], action) => {
   switch (action.type) {
-    case `${GET}/fulfilled`:
+    case `${GET}/fulfilled`: {
       const DATA = action.payload.map((item) => ({
         id: item.id,
         name: item.rocket_name,
@@ -17,9 +17,10 @@ const rocketsReducer = (state = [], action) => {
       }));
       localStorage.setItem('ROCKET_DATA', JSON.stringify(DATA));
       return DATA;
+    }
     case GET_STORED:
       return action.payload;
-    case UPDATE:
+    case UPDATE: {
       const modifiedState = state.map((item) => {
         if (item.id === action.id) {
           return ({
@@ -28,9 +29,10 @@ const rocketsReducer = (state = [], action) => {
           });
         }
         return item;
-      })
+      });
       localStorage.setItem('ROCKET_DATA', JSON.stringify(modifiedState));
       return modifiedState;
+    }
     default:
       return state;
   }
@@ -40,8 +42,8 @@ const getRockets = createAsyncThunk(
   GET,
   async () => {
     const response = await axios('https://api.spacexdata.com/v3/rockets');
-    return response.data; 
-  }
+    return response.data;
+  },
 );
 
 const getStored = () => ({

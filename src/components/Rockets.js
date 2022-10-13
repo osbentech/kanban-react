@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRockets, getStored, updateStatus } from './Redux/Rockets/rockets';
+import PropTypes from 'prop-types';
 import styles from './Rockets.module.css';
 
 export default function Rockets() {
@@ -10,27 +11,25 @@ export default function Rockets() {
   const DATA = localStorage.getItem('ROCKET_DATA');
 
   const getData = () => {
-    DATA ? dispatch(getStored()) : dispatch(getRockets());
+    return DATA ? dispatch(getStored()) : dispatch(getRockets());
   };
 
   useEffect(() => {
     getData();
-  }, [])
-  
+  }, []);
+
   return (
     <div className={styles.rockets}>
-      {rockets.map((item) => {
-        return (
-          <Rocket
-            key={item.id}
-            id={item.id}
-            name={item.name}
-            description={item.description}
-            img={item.image}
-            reserved={item.reserved}
-          />
-        );
-      })}
+      {rockets.map((item) => (
+        <Rocket
+          key={item.id}
+          id={item.id}
+          name={item.name}
+          description={item.description}
+          img={item.image}
+          reserved={item.reserved}
+        />
+      ))}
     </div>
   );
 };
@@ -48,17 +47,17 @@ function Rocket({
 
   const btnStyle = (reserved) ? {
     backgroundColor: 'transparent',
-      color: '#858b92',
-      border: '1px solid #858b92',
+    color: '#858b92',
+    border: '1px solid #858b92',
   }
-  : {
-    backgroundColor: '#007bff',
-    color: 'white',
-    border: 'none',
-  };
+    : {
+      backgroundColor: '#007bff',
+      color: 'white',
+      border: 'none',
+    };
 
   const tagStyle = (reserved) ? { display: 'inline' } : { display: 'none' };
-  
+
   return (
     <div className={styles.rocket}>
       <img src={img} alt={`The ${name} Rocket`} />
@@ -78,4 +77,12 @@ function Rocket({
       </div>
     </div>
   );
-};
+}
+
+Rocket.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
+}
