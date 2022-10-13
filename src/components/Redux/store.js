@@ -1,9 +1,9 @@
 import { configureStore,  combineReducers } from '@reduxjs/toolkit';
-import rocketsReducer from './Rocket/rockets';
+// import rocketsReducer from './Rocket/rockets';
 import missionsReducer from './Mission/missions';
 
 const rootReducer = combineReducers({
-  rockets: rocketsReducer,
+//   rockets: rocketsReducer,
   missions: missionsReducer,
 });
 
