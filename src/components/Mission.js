@@ -54,20 +54,22 @@ function Mission({
         {reserved && <p className={styles.activeTag}>Active member</p>}
       </div>
       <div className={styles.btnContainer}>
-        {!reserved && <button
-          type="button"
-          className={styles.joinBtn}
-          onClick={() => dispatch(updateStatus(id))}
-        >
-          Join Mission
-        </button>}
-        {reserved && <button
-          type="button"
-          className={styles.cancelBtn}
-          onClick={() => dispatch(updateStatus(id))}
-        >
-          Leave Mission
-        </button>}
+        {!reserved &&
+          (<button
+            type="button"
+            className={styles.joinBtn}
+            onClick={() => dispatch(updateStatus(id))}
+          >
+            Join Mission
+          </button>)}
+        {reserved &&
+          (<button
+            type="button"
+            className={styles.cancelBtn}
+            onClick={() => dispatch(updateStatus(id))}
+          >
+            Leave Mission
+          </button>)}
       </div>
     </div>
   );

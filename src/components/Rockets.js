@@ -50,20 +50,22 @@ function Rocket({
           {reserved && <span className={styles.tag}>Reserved</span>}
           {description}
         </p>
-        {!reserved && <button
-          type="button"
-          className={styles.reservationBtn}
-          onClick={() => dispatch(updateStatus(id))}
-        >
-          Reserve Rocket
-        </button>}
-        {reserved && <button
-          type="button"
-          className={styles.cancelationBtn}
-          onClick={() => dispatch(updateStatus(id))}
-        >
-          Cancel Reservation
-        </button>}
+        {!reserved &&
+          (<button
+            type="button"
+            className={styles.reservationBtn}
+            onClick={() => dispatch(updateStatus(id))}
+          >
+            Reserve Rocket
+          </button>)}
+        {reserved &&
+          (<button
+            type="button"
+            className={styles.cancelationBtn}
+            onClick={() => dispatch(updateStatus(id))}
+          >
+            Cancel Reservation
+          </button>)}
       </div>
     </div>
   );
