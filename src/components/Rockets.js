@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRockets, getStored, updateStatus } from './Redux/Rockets/rockets';
 import PropTypes from 'prop-types';
+import { getRockets, getStored, updateStatus } from './Redux/Rockets/rockets';
 import styles from './Rockets.module.css';
 
 export default function Rockets() {
@@ -10,9 +10,7 @@ export default function Rockets() {
   const rockets = useSelector((state) => state.rockets);
   const DATA = localStorage.getItem('ROCKET_DATA');
 
-  const getData = () => {
-    return DATA ? dispatch(getStored()) : dispatch(getRockets());
-  };
+  const getData = () => DATA ? dispatch(getStored()) : dispatch(getRockets());
 
   useEffect(() => {
     getData();
@@ -32,7 +30,7 @@ export default function Rockets() {
       ))}
     </div>
   );
-};
+}
 
 function Rocket({
   id,
@@ -85,4 +83,4 @@ Rocket.propTypes = {
   description: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   reserved: PropTypes.bool.isRequired,
-}
+};
