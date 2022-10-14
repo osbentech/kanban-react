@@ -5,14 +5,12 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import store from './components/Redux/store';
 import { Provider } from 'react-redux';
-// import Table from './components/Table';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
     <BrowserRouter >
       <App />
-      {/* <Table /> */}
     </BrowserRouter>
   </Provider>
 
