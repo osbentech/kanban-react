@@ -55,8 +55,7 @@ function Mission({
       </div>
       <div className={styles.btnContainer}>
         {!reserved
-          &&
-          (
+          && (
             <button
               type="button"
               className={styles.joinBtn}
@@ -66,8 +65,7 @@ function Mission({
             </button>
           )}
         {reserved
-          &&
-          (
+          && (
             <button
               type="button"
               className={styles.cancelBtn}

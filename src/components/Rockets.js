@@ -51,8 +51,7 @@ function Rocket({
           {description}
         </p>
         {!reserved
-          &&
-          (
+          && (
             <button
               type="button"
               className={styles.reservationBtn}
@@ -62,8 +61,7 @@ function Rocket({
             </button>
           )}
         {reserved
-          &&
-          (
+          && (
             <button
               type="button"
               className={styles.cancelationBtn}
