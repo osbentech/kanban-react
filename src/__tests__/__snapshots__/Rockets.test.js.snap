@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="rockets"
+>
+  <div
+    className="rocket"
+  >
+    <img
+      alt="The Falcon 1 Rocket"
+      src="https://imgur.com/DaCfMsj.jpg"
+    />
+    <div
+      className="info"
+    >
+      <h2>
+        Falcon 1
+      </h2>
+      <p>
+        <span
+          className="tag"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          Reserved
+        </span>
+        The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.
+      </p>
+      <button
+        style={
+          Object {
+            "backgroundColor": "#007bff",
+            "border": "none",
+            "color": "white",
+          }
+        }
+        type="button"
+      >
+        Reserve Rocket
+      </button>
+    </div>
+  </div>
+  <div
+    className="rocket"
+  >
+    <img
+      alt="The Falcon 9 Rocket"
+      src="https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg"
+    />
+    <div
+      className="info"
+    >
+      <h2>
+        Falcon 9
+      </h2>
+      <p>
+        <span
+          className="tag"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          Reserved
+        </span>
+        Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of satellites and the Dragon spacecraft into orbit.
+      </p>
+      <button
+        style={
+          Object {
+            "backgroundColor": "#007bff",
+            "border": "none",
+            "color": "white",
+          }
+        }
+        type="button"
+      >
+        Reserve Rocket
+      </button>
+    </div>
+  </div>
+  <div
+    className="rocket"
+  >
+    <img
+      alt="The Falcon Heavy Rocket"
+      src="https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg"
+    />
+    <div
+      className="info"
+    >
+      <h2>
+        Falcon Heavy
+      </h2>
+      <p>
+        <span
+          className="tag"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          Reserved
+        </span>
+        With the ability to lift into orbit over 54 metric tons (119,000 lb)--a mass equivalent to a 737 jetliner loaded with passengers, crew, luggage and fuel--Falcon Heavy can lift more than twice the payload of the next closest operational vehicle, the Delta IV Heavy, at one-third the cost.
+      </p>
+      <button
+        style={
+          Object {
+            "backgroundColor": "#007bff",
+            "border": "none",
+            "color": "white",
+          }
+        }
+        type="button"
+      >
+        Reserve Rocket
+      </button>
+    </div>
+  </div>
+  <div
+    className="rocket"
+  >
+    <img
+      alt="The Starship Rocket"
+      src="https://live.staticflickr.com/65535/48954138962_ee541e6755_b.jpg"
+    />
+    <div
+      className="info"
+    >
+      <h2>
+        Starship
+      </h2>
+      <p>
+        <span
+          className="tag"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          Reserved
+        </span>
+        Starship and Super Heavy Rocket represent a fully reusable transportation system designed to service all Earth orbit needs as well as the Moon and Mars. This two-stage vehicle — composed of the Super Heavy rocket (booster) and Starship (ship) — will eventually replace Falcon 9, Falcon Heavy and Dragon.
+      </p>
+      <button
+        style={
+          Object {
+            "backgroundColor": "#007bff",
+            "border": "none",
+            "color": "white",
+          }
+        }
+        type="button"
+      >
+        Reserve Rocket
+      </button>
+    </div>
+  </div>
+</div>
+`;

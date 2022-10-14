@@ -1,0 +1,66 @@
+.rockets {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 7rem 5rem;
+}
+
+.rocket {
+  display: flex;
+  gap: 1rem;
+}
+
+.rocket img {
+  width: 20rem;
+}
+
+.info {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info h2 {
+  margin: 5px 0 0 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.info p {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.7rem;
+}
+
+.reservationBtn,
+.cancelationBtn {
+  border-radius: 7px;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  align-self: flex-start;
+  font-weight: 600;
+}
+
+.reservationBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.cancelationBtn {
+  background-color: transparent;
+  color: #858b92;
+  border: 1px solid #858b92;
+}
+
+.tag {
+  background-color: #18a2b8;
+  padding: 1px 6px;
+  border-radius: 10px;
+  color: white;
+  margin-right: 7px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}

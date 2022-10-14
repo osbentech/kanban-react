@@ -1,0 +1,28 @@
+.myProfile {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 7rem 5rem;
+}
+
+.rocketList {
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid grey;
+  width: 20rem;
+}
+
+.rocketList p,
+.missionList p {
+  margin: 0;
+  padding: 16px 10px;
+  border-bottom: 0.5px solid grey;
+}
+
+.missionList {
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid grey;
+  width: 20rem;
+}
