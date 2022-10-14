@@ -15,10 +15,10 @@ const NavBar = () => {
         Space Travelers&apos; Hub
       </h2>
       <div className="nav-links">
-        <NavLink to="/">Rockets</NavLink>
-        <NavLink to="/missions">Missions</NavLink>
+        <NavLink to="/rockets" className="link">Rockets</NavLink>
+        <NavLink to="/missions" className="link">Missions</NavLink>
         <span className="separator">|</span>
-        <NavLink to="/my-profile">My Profile</NavLink>
+        <NavLink to="/my-profile" className="link">My Profile</NavLink>
       </div>
     </header>
   );

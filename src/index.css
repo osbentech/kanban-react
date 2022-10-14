@@ -9,9 +9,17 @@ body {
 
 .header {
   display: flex;
-  padding: 1rem;
+  padding: 0 5rem;
   align-items: center;
   gap: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.514);
 }
 
 .title {
@@ -21,4 +29,19 @@ body {
 .nav-links {
   display: flex;
   gap: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.link.active {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
 }

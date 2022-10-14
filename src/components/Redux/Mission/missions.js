@@ -17,6 +17,7 @@ const missionsReducer = (state = [], action) => {
       return Data;
     }
     case GET_STORED:
+      console.log(action.payload);
       return action.payload;
     case UPDATE: {
       const modifiedState = state.map((item) => {
