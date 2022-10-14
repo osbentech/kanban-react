@@ -1,3 +1,7 @@
+.missions {
+  margin: 7rem 5rem;
+}
+
 .mission {
   display: flex;
   border: 0.1px solid grey;
@@ -38,6 +42,7 @@
   border: 0.1px solid grey;
   width: 95vw;
   margin: auto;
+  margin-top: 7rem;
 }
 
 .tableHeaders {
