@@ -1,6 +1,5 @@
 .myProfile {
   display: flex;
-  margin: 2rem 10rem;
   gap: 4rem;
   align-items: flex-start;
   justify-content: center;
