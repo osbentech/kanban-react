@@ -13,7 +13,8 @@
   width: 20rem;
 }
 
-.rocketList p {
+.rocketList p,
+.missionList p {
   margin: 0;
   padding: 16px 10px;
   border-bottom: 0.5px solid grey;
