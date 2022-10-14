@@ -1,3 +1,5 @@
+/* eslint-disable*/
+
 import styles from './Mission.module.css';
 
 function getMissions() {

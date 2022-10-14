@@ -1,3 +1,5 @@
+/* eslint-disable*/
+
 import { getMissions } from './MissionsMock';
 import styles from './Profile.module.css';
 import { getRockets } from './RocketsMock';
