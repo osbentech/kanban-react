@@ -41,37 +41,29 @@ function Rocket({
 }) {
   const dispatch = useDispatch();
 
-  const btnText = (!reserved) ? 'Reserve Rocket' : 'Cancel Reservation';
-
-  const btnStyle = (reserved) ? {
-    backgroundColor: 'transparent',
-    color: '#858b92',
-    border: '1px solid #858b92',
-  }
-    : {
-      backgroundColor: '#007bff',
-      color: 'white',
-      border: 'none',
-    };
-
-  const tagStyle = (reserved) ? { display: 'inline' } : { display: 'none' };
-
   return (
     <div className={styles.rocket}>
       <img src={img} alt={`The ${name} Rocket`} />
       <div className={styles.info}>
         <h2>{name}</h2>
         <p>
-          <span style={tagStyle} className={styles.tag}>Reserved</span>
+          {reserved && <span className={styles.tag}>Reserved</span>}
           {description}
         </p>
-        <button
-          onClick={() => dispatch(updateStatus(id))}
+        {!reserved && <button
           type="button"
-          style={btnStyle}
+          className={styles.reservationBtn}
+          onClick={() => dispatch(updateStatus(id))}
         >
-          {btnText}
-        </button>
+          Reserve Rocket
+        </button>}
+        {reserved && <button
+          type="button"
+          className={styles.cancelationBtn}
+          onClick={() => dispatch(updateStatus(id))}
+        >
+          Cancel Reservation
+        </button>}
       </div>
     </div>
   );

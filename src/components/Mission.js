@@ -43,21 +43,6 @@ function Mission({
   reserved,
 }) {
   const dispatch = useDispatch();
-  const btnText = (!reserved) ? 'Join Mission' : 'Leave Mission';
-  const statusTxt = (!reserved) ? 'NOT A MEMBER' : 'Active member';
-
-  const btnStyle = (reserved) ? {
-    backgroundColor: 'transparent',
-    color: '#dc3645',
-    border: '1px solid #dc3645',
-  }
-    : {
-      backgroundColor: 'transparent',
-      color: '#343a40',
-      border: '1px solid #343a40',
-    };
-
-  const tagStyle = (reserved) ? { backgroundColor: '#18a2b8' } : { backgroundColor: '#6d757d' };
 
   return (
 
@@ -65,17 +50,24 @@ function Mission({
       <h2>{name}</h2>
       <p className={styles.description}>{description}</p>
       <div className={styles.tagContainer}>
-        <p style={tagStyle} className={styles.tag}>{statusTxt}</p>
+        {!reserved && <p className={styles.tag}>NOT A MEMBER</p>}
+        {reserved && <p className={styles.activeTag}>Active member</p>}
       </div>
       <div className={styles.btnContainer}>
-        <button
-          style={btnStyle}
+        {!reserved && <button
           type="button"
-          className={styles.missionBtn}
+          className={styles.joinBtn}
           onClick={() => dispatch(updateStatus(id))}
         >
-          {btnText}
-        </button>
+          Join Mission
+        </button>}
+        {reserved && <button
+          type="button"
+          className={styles.cancelBtn}
+          onClick={() => dispatch(updateStatus(id))}
+        >
+          Leave Mission
+        </button>}
       </div>
     </div>
   );

@@ -34,7 +34,8 @@
   line-height: 1.7rem;
 }
 
-.info button {
+.reservationBtn,
+.cancelationBtn {
   border-radius: 7px;
   padding: 12px 20px;
   font-size: 18px;
@@ -43,8 +44,19 @@
   font-weight: 600;
 }
 
+.reservationBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.cancelationBtn {
+  background-color: transparent;
+  color: #858b92;
+  border: 1px solid #858b92;
+}
+
 .tag {
-  display: none;
   background-color: #18a2b8;
   padding: 1px 6px;
   border-radius: 10px;
