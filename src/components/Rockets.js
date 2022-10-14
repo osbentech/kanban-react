@@ -10,7 +10,7 @@ export default function Rockets() {
   const rockets = useSelector((state) => state.rockets);
   const DATA = localStorage.getItem('ROCKET_DATA');
 
-  const getData = () => DATA ? dispatch(getStored()) : dispatch(getRockets());
+  const getData = () => (DATA ? dispatch(getStored()) : dispatch(getRockets()));
 
   useEffect(() => {
     getData();
