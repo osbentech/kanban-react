@@ -4,7 +4,8 @@ Space Hub
 
 # Description the project.
 
-Under Development
+This is React group Project named Space-hub.
+It fetches Mission and Rocket data from the Api and displays it in the UI
 
 ## Built With
 
@@ -17,11 +18,11 @@ Under Development
 
 ## Screenshots
 
-The project is still in development, check this section later.
+<img width="800" alt="JS Capstone Preview Screenshot" src="./img/space-hub.png">
 
 ## Link to the Page
 
-The project is still in development, check this section later.
+[link](https://github.com/osbentech/space-hub)
 
 ## Getting Started
 
