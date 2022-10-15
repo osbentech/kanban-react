@@ -33,14 +33,14 @@ function Missions() {
         />
       ))}
     </div>
-  )
-};
+  );
+}
 
 function Mission({
   name,
   id,
   description,
-  reserved
+  reserved,
 }) {
   const dispatch = useDispatch();
   const btnText = (!reserved) ? 'Join Mission' : 'Leave Mission';

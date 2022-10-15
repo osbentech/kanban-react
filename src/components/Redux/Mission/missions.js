@@ -33,15 +33,15 @@ const missionsReducer = (state = [], action) => {
     }
     default:
       return state;
-  };
-}
+  }
+};
 
 const getMissions = createAsyncThunk(
   GET,
   async () => {
     const data = await fetch('https://api.spacexdata.com/v3/missions');
     const payload = await data.json();
-    return payload;   
+    return payload;
   },
 );
 

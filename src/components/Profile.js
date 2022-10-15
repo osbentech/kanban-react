@@ -20,8 +20,7 @@ export default function Profile() {
       <div className={styles.rockets}>
         <h2>Rockets</h2>
         <div className={styles.rocketList}>
-          {resRockets.map((rocket) =>
-          (
+          {resRockets.map((rocket) => (
             <p key={rocket.id}>{rocket.name}</p>
           ))}
         </div>
