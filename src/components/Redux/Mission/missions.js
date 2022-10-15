@@ -1,23 +1,24 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+
 const GET = './Mission/missions/GET';
 const GET_STORED = './Mission/missions/GET_STORED';
 const UPDATE = './Mission/missions/UPDATE';
 
 const missionsReducer = (state = [], action) => {
   switch (action.type) {
-    case `${GET}/fulfilled`:
+    case `${GET}/fulfilled`: {
       const Data = action.payload.map((item) => ({
         name: item.mission_name,
         description: item.description,
         id: item.mission_id,
         reserved: false,
-      }))
-      localStorage.setItem('mission_Data', JSON.stringify(Data))
+      }));
+      localStorage.setItem('mission_Data', JSON.stringify(Data));
       return Data;
-
+    }
     case GET_STORED:
       return action.payload;
-    case UPDATE:
+    case UPDATE: {
       const modifiedState = state.map((item) => {
         if (item.id === action.id) {
           return ({
@@ -26,12 +27,13 @@ const missionsReducer = (state = [], action) => {
           });
         }
         return item;
-      })
+      });
       localStorage.setItem('mission_Data', JSON.stringify(modifiedState));
       return modifiedState;
+    }
     default:
       return state;
-  }
+  };
 }
 
 const getMissions = createAsyncThunk(
@@ -40,8 +42,8 @@ const getMissions = createAsyncThunk(
     const data = await fetch('https://api.spacexdata.com/v3/missions');
     const payload = await data.json();
     return payload;   
-  }
-)
+  },
+);
 
 const getStoredMissions = () => ({
   type: GET_STORED,

@@ -3,7 +3,9 @@
   border: 0.1px solid grey;
 }
 
-.mission:nth-child(even){background-color: #f2f2f2;}
+.mission:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
 .mission h2,
 .name {
@@ -67,10 +69,8 @@
   padding: 1px 6px;
   border-radius: 10px;
   color: white;
-  margin-right: 7px;
   font-family: 'Barlow Semi Condensed', sans-serif;
   align-self: center;
   white-space: nowrap;
-  margin: auto 1rem;
+  margin: auto 7px auto 1rem;
 }
-

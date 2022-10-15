@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 import styles from './Profile.module.css';
 
 export default function Profile() {
@@ -12,21 +12,18 @@ export default function Profile() {
       <div className={styles.missions}>
         <h2>Missions</h2>
         <div className={styles.missionList}>
-        {resMissions.map((mission) => {
-            return (
-              <p key={mission.id}>{mission.name}</p>
-            );
-          })}
+          {resMissions.map((mission) => (
+            <p key={mission.id}>{mission.name}</p>
+          ))}
         </div>
       </div>
       <div className={styles.rockets}>
         <h2>Rockets</h2>
         <div className={styles.rocketList}>
-          {resRockets.map((rocket) => {
-            return (
-              <p key={rocket.id}>{rocket.name}</p>
-            );
-          })}
+          {resRockets.map((rocket) =>
+          (
+            <p key={rocket.id}>{rocket.name}</p>
+          ))}
         </div>
       </div>
     </div>
