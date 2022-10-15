@@ -18,7 +18,7 @@ It fetches Mission and Rocket data from the Api and displays it in the UI
 
 ## Screenshots
 
-<img width="800" alt="JS Capstone Preview Screenshot" src="./img/space-hub.png">
+<img width="800" alt="React group Project Preview Screenshot" src="./img/space-hub.png">
 
 ## Link to the Page
 
