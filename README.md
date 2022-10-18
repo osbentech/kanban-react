@@ -24,6 +24,10 @@ It fetches Mission and Rocket data from the Api and displays it in the UI
 
 [link](https://github.com/osbentech/space-hub)
 
+## Live Demo
+
+[link](https://osbentech.github.io/space-hub/)
+
 ## Getting Started
 
 ### Setup
