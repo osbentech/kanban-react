@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
+        <Route path="/" element={<Rockets />} />
         <Route path="/rockets" element={<Rockets />} />
         <Route path="/missions" element={<Mission />} />
         <Route path="/my-profile" element={<Profile />} />
