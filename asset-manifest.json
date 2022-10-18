@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/space-hub/static/css/main.d26acacf.css",
+    "main.js": "/space-hub/static/js/main.efe94392.js",
+    "index.html": "/space-hub/index.html",
+    "main.d26acacf.css.map": "/space-hub/static/css/main.d26acacf.css.map",
+    "main.efe94392.js.map": "/space-hub/static/js/main.efe94392.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d26acacf.css",
+    "static/js/main.efe94392.js"
+  ]
+}
